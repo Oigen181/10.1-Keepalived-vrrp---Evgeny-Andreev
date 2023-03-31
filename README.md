@@ -1,10 +1,26 @@
 ### Задание 1
 
-![4](https://user-images.githubusercontent.com/126493876/228545219-d2eecdf6-ada0-4586-9554-314f174b6483.png)
+![7](https://user-images.githubusercontent.com/126493876/229067275-5af67e2d-078d-4ee4-bc97-2cf3f3c02d3e.png)
 
-![5](https://user-images.githubusercontent.com/126493876/228545274-efa3f591-af4e-42ae-a19f-60b6270f5b5a.png)
+![8](https://user-images.githubusercontent.com/126493876/229067345-7f24c76a-6908-4ec6-90ff-9b2c7adfc50e.png)
 
-![6](https://user-images.githubusercontent.com/126493876/228545332-4a5cb771-22c0-4654-9b01-3ac03f395721.png)
+vrrp_instance failover_test {
+state MASTER
+interface enp0s8
+virtual_router_id 10
+priority 110
+advert_int 4
+authentication {
+auth_type AH
+auth_pass 1111
+}
+unicast_peer {
+192.168.0.1
+}
+virtual_ipaddress {
+192.168.0.50 dev enp0s8 label enp0s3:vip
+}
+}
 
 ### Node 2
 
