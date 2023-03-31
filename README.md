@@ -2,7 +2,7 @@
 
 ![10](https://user-images.githubusercontent.com/126493876/229119205-4cff470a-92d9-4915-915d-1b89e782c8d8.png)
 
-'''rd
+```rd
 vrrp_instance failover_test {
 state BACKUP
 interface enp0s3
