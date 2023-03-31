@@ -8,7 +8,7 @@ vrrp_instance failover_test {
 
 state MASTER
 
-interface enp0s8
+interface enp0s3
 
 virtual_router_id 10
 
@@ -32,7 +32,7 @@ unicast_peer {
 
 virtual_ipaddress {
 
-192.168.0.50 dev enp0s8 label enp0s3:vip
+192.168.0.50 dev enp0s3 label enp0s3:vip
 
 }
 
@@ -47,7 +47,7 @@ vrrp_instance failover_test {
 
 state BACKUP
 
-interface enp0s8
+interface enp0s3
 
 virtual_router_id 10
 
@@ -71,7 +71,7 @@ unicast_peer {
 
 virtual_ipaddress {
 
-192.168.0.50 dev enp0s8 label enp0s3:vip
+192.168.0.50 dev enp0s3 label enp0s3:vip
 
 }
 
