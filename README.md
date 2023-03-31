@@ -17,15 +17,25 @@ priority 110
 advert_int 4
 
 authentication {
+
 auth_type AH
+
 auth_pass 1111
+
 }
+
 unicast_peer {
+
 192.168.0.1
+
 }
+
 virtual_ipaddress {
+
 192.168.0.50 dev enp0s8 label enp0s3:vip
+
 }
+
 }
 
 ### Node 2
